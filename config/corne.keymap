@@ -60,6 +60,13 @@
             bindings = <&kp LESS_THAN &kp GREATER_THAN &kp LEFT>;
             label = "MIN_MAX_MACRO";
         };
+
+        bkt_macro: bkt_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp GRAVE &kp LEFT_ARROW>;
+            label = "BKT_MACRO";
+        };
     };
 
     combos {
@@ -145,7 +152,7 @@
 
             display-name = "Sym+Media";
             bindings = <
-  &trans         &kp BACKSLASH  &kp PIPE          &kp LEFT_BRACE    &kp RBRC             &trans  &to 0              &trans            &to 4            &trans
+  &kp GRAVE      &kp BACKSLASH  &kp PIPE          &kp LEFT_BRACE    &kp RBRC             &trans  &to 0              &trans            &to 4            &trans
   &kp DOLLAR     &kp TILDE      &kp MINUS         &kp LPAR          &kp RPAR             &trans  &kp C_VOLUME_DOWN  &kp C_MUTE        &kp C_VOLUME_UP  &trans
   &kp AMPERSAND  &kp LESS_THAN  &kp GREATER_THAN  &kp LEFT_BRACKET  &kp RIGHT_BRACKET    &trans  &kp C_PREVIOUS     &kp C_PLAY_PAUSE  &kp C_NEXT       &trans
                                 &trans            &trans            &trans               &trans  &trans             &trans
